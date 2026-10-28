@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>18 Meses bajo el cielo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="main-title">18 meses bajo el cielo</h1>
+    <p class="hint-text" id="hintText">toca las estrellas y descubre nuestra historia</p>
+  </header>
+
+  <!-- Controles de música ambiental -->
+  <div class="music-controls-container" id="musicControls">
+    <button id="musicToggleBtn" class="music-toggle-btn" aria-label="Reproducir o pausar música" title="Música">
+      <span class="music-icon">🎵</span>
+    </button>
+    <div class="volume-slider-wrapper">
+      <span class="vol-icon">🔉</span>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7" class="volume-slider" title="Volumen">
+    </div>
+  </div>
+  <audio id="bgAudio" src="songs/Daniel,%20Me%20Est%C3%A1s%20Matando.mp3" loop preload="auto"></audio>
+
+  <canvas id="skyCanvas"></canvas>
+
+  <div class="phrase-banner" id="phraseBanner">
+    <div class="phrase-tag" id="phraseMonth">Mes 1</div>
+    <div class="phrase-content" id="phraseText"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
